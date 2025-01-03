@@ -42,7 +42,7 @@ jobs:
         run: |
           #!/bin/bash
           mvn clean package
-          mvn package --file microservice-kubernetes-demo-catalog/pom.xml
+          mvn package --file microservice-kubernetes-demo/microservice-kubernetes-demo-catalog/pom.xml
 
       - name: "Build Docker Image for Microservice-1"
         run: |
@@ -60,7 +60,7 @@ jobs:
         run: |
           #!/bin/bash
           mvn clean package
-          mvn package --file microservice-kubernetes-demo-customer/pom.xml
+          mvn package --file microservice-kubernetes-demo/microservice-kubernetes-demo-customer/pom.xml
 
       - name: " Build Image for Microservice-2"
         run: |
@@ -77,7 +77,7 @@ jobs:
         run: |
           #!/bin/bash
           mvn clean package
-          mvn package --file microservice-kubernetes-demo-order/pom.xml
+          mvn package --file microservice-kubernetes-demo/microservice-kubernetes-demo-order/pom.xml
         shell: bash
 
       - name: "Build Image for Microservice-3"
