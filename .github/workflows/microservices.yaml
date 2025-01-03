@@ -47,7 +47,7 @@ jobs:
       - name: "Build JAR for Microservice 1"
         run: |
           #!/bin/bash
-          mvn package --file microservice-kubernetes-demo/microservice-kubernetes-demo-catalog/pom.xml
+          mvn package --file ./microservice-kubernetes-demo/microservice-kubernetes-demo-catalog/pom.xml
 
       - name: "Build Docker Image for Microservice-1"
         run: |
