@@ -47,7 +47,7 @@ jobs:
       - name: "Build Docker Image for Microservice-1"
         run: |
           #!/bin/bash
-          docker build -t microservice1 ./microservice-kubernetes-demo-catalog
+          docker build -t microservice1 ./microservice-kubernetes-demo/microservice-kubernetes-demo-catalog
         shell: bash
 
       - name: "Tag and push Microservice-1 images to GAR"
@@ -65,7 +65,7 @@ jobs:
       - name: " Build Image for Microservice-2"
         run: |
           #!/bin/bash
-          docker build -t microservice2 ./microservice-kubernetes-demo-customer
+          docker build -t microservice2 ./microservice-kubernetes-demo/microservice-kubernetes-demo-customer
 
       - name: "Tag and push images to GAR"
         run: |
@@ -83,7 +83,7 @@ jobs:
       - name: "Build Image for Microservice-3"
         run: |
           #!/bin/bash
-          docker build -t microservice3 ./microservice-kubernetes-demo-order
+          docker build -t microservice3 ./microservice-kubernetes-demo/microservice-kubernetes-demo-order
         shell: bash
 
       - name: "Tag and push images to GAR"
