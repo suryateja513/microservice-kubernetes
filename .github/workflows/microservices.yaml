@@ -24,11 +24,11 @@ jobs:
         with:
           maven-version: 3.8.2
 
-      - name: "Clean target "
-        run: |
-          #!/bin/bash
-          mvn clean package
-        shell: bash
+#      - name: "Clean target "
+#        run: |
+#          #!/bin/bash
+#          mvn clean package
+#        shell: bash
 
       - name: 'Setup GCP SDK'
         uses: google-github-actions/setup-gcloud@v2
