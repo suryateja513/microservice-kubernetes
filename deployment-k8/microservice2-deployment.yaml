@@ -1,5 +1,5 @@
 kind: Deployment
-apiVersion: apps/V1
+apiVersion: apps/v1
 metadata:
   name: microservice2-deployment
   namespace: surya-namespace
@@ -27,7 +27,6 @@ metadata:
   name: microservice-2
 spec:
   selector:
-    labels:
       app: surya
   ports:
     - protocol: TCP
