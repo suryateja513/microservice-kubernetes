@@ -38,6 +38,12 @@ jobs:
         with:
           credentials_json: ${{ secrets.SA }}
 
+      - name: "Setup Docker Credentials"
+        run: |
+          #!/bin/bash
+          gcloud auth configure-docker us-central1-docker.pkg.dev
+        shell: bash
+
       - name: "Build JAR for Microservice 1"
         run: |
           #!/bin/bash
