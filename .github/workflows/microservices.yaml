@@ -41,7 +41,6 @@ jobs:
       - name: "Build JAR for Microservice 1"
         run: |
           #!/bin/bash
-          mvn clean package
           mvn package --file microservice-kubernetes-demo/microservice-kubernetes-demo-catalog/pom.xml
 
       - name: "Build Docker Image for Microservice-1"
@@ -59,7 +58,6 @@ jobs:
       - name: "Build JAR for Microservice-2"
         run: |
           #!/bin/bash
-          mvn clean package
           mvn package --file microservice-kubernetes-demo/microservice-kubernetes-demo-customer/pom.xml
 
       - name: " Build Image for Microservice-2"
@@ -76,7 +74,6 @@ jobs:
       - name: "Build JAR files for Microservice-3"
         run: |
           #!/bin/bash
-          mvn clean package
           mvn package --file microservice-kubernetes-demo/microservice-kubernetes-demo-order/pom.xml
         shell: bash
 
