@@ -9,7 +9,7 @@ spec:
       app: demo-catalog
   template:
     metadata:
-      container:
+      containers:
         - name: surya-cont
           image: us-central1-docker.pkg.dev/pelagic-arch-447215-p4/surya-artifact/demo-catalog:latest
           ports:
