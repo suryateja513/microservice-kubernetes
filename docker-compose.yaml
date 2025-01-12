@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  demo-catalog:
+    build:
+      context: ./microservice-kubernetes-demo/microservice-kubernetes-demo-catalog
+      dockerfile: Dockerfile
+    image: demo-catalog
+
+  demo-customer:
+    build:
+      context: ./microservice-kubernetes-demo/microservice-kubernetes-demo-customer
+      dockerfile: Dockerfile
+    image: demo-customer
+
+  demo-order:
+    build:
+      context: ././microservice-kubernetes-demo/microservice-kubernetes-demo-order
+      dockerfile: Dockerfile
+    image: demo-order

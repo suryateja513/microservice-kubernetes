@@ -1,0 +1,35 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: demo-catalog
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demo-catalog
+  template:
+    metadata:
+      container:
+        - name: surya-cont
+          image: us-central1-docker.pkg.dev/pelagic-arch-447215-p4/surya-artifact/demo-catalog:latest
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env:
+            - name: demo-catalog-username
+              valueFrom:
+                secretKeyRef:
+                  name: user
+                  key: username
+            - name: demo-catalog-password
+              valueFrom:
+                secretKeyRef:
+                  name: password
+                  key: password
+            - name: application-port
+              valueFrom:
+                ConfigMapKeyRef:
+                  name: port
+                  key: port
+
+
