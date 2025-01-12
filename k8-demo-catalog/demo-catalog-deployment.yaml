@@ -31,7 +31,7 @@ spec:
                   key: password
             - name: application-port
               valueFrom:
-                ConfigMapKeyRef:
+                configMapKeyRef:
                   name: port
                   key: port
 
