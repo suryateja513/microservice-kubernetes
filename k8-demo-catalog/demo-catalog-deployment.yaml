@@ -9,6 +9,9 @@ spec:
       app: demo-catalog
   template:
     metadata:
+      labels:
+        app: demo-catalog
+    spec:
       containers:
         - name: surya-cont
           image: us-central1-docker.pkg.dev/pelagic-arch-447215-p4/surya-artifact/demo-catalog:latest
