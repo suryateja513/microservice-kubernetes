@@ -3,7 +3,7 @@ name: microservice-kubernetes-docker-compose #
 on:
   push:
     branches:
-      - teja
+      - tejaa
 
 jobs:
   microservices-docker-compose:
